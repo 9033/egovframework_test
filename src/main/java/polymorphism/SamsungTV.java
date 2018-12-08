@@ -1,16 +1,16 @@
 package polymorphism;
 
-public class SamsungTV{
-	public void powerOn(){
+public class SamsungTV implements TV{
+	public void turnOn(){
 		System.out.println("SamsungTV 전원 켠다.");
 	}
-	public void powerOff(){
+	public void turnOff(){
 		System.out.println("SamsungTV 전원 끈다.");
 	}
-	public void volumeUp(){
+	public void soundUp(){
 		System.out.println("SamsungTV 소리 올린다.");
 	}
-	public void volumeDown(){
+	public void soundDown(){
 		System.out.println("SamsungTV 소리 내린다.");
 	}	
 }
