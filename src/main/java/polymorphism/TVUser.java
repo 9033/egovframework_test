@@ -1,12 +1,21 @@
 package polymorphism;
 
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
 public class TVUser{
 	public static void main(String[] args){
-		BeanFactory factory = new BeanFactory();
-		TV tv=(TV)factory.getBean(args[0]);
+		//스프링 컨테이너를 구동한다
+		AbstractApplicationContext factory=new GenericXmlApplicationContext("applicationContext.xml");
+		
+		//스프링 컨테이너에서 객체를 요청함.
+		TV tv=(TV)factory.getBean("tv");
 		tv.turnOn();
 		tv.soundUp();
 		tv.soundDown();
 		tv.turnOff();
+		
+		//스프링 컨테이너 종료
+		factory.close();
 	}	
 }
