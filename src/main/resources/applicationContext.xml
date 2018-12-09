@@ -9,6 +9,8 @@
 	<constructor-arg ref="apple" index="0"></constructor-arg>
 	<constructor-arg value="2000000" index="1">
 	</constructor-arg>
+	<property name="speaker" ref="sony"></property>
+	<property name="price" value="2200000"></property>
 	</bean>
 	<bean id="sony" class="polymorphism.SonySpeaker" lazy-init="true"></bean>
 	<bean id="apple" class="polymorphism.AppleSpeaker"></bean>

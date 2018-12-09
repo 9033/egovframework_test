@@ -4,6 +4,16 @@ public class SamsungTV implements TV{
 	private Speaker speaker;
 	private int price;
 	
+	//setter injection
+	public void setSpeaker(Speaker speaker) {
+		System.out.println("setSpeaker 호출");
+		this.speaker = speaker;
+	}
+	public void setPrice(int price) {
+		System.out.println("setPrice 호출");
+		this.price = price;
+	}
+	
 	public SamsungTV(){
 		System.out.println("SamsungTV 생성");
 	}
@@ -12,7 +22,7 @@ public class SamsungTV implements TV{
 		this.speaker=speaker;
 	}
 	public SamsungTV(Speaker speaker, int price){
-		System.out.println("SamsungTV 생성 (생성자 인젝션)");
+		System.out.println("SamsungTV 생성 (생성자 인젝션) price : "+price);
 		this.speaker=speaker;
 		this.price=price;
 	}
