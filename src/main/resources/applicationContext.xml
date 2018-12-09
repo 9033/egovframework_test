@@ -6,5 +6,9 @@
 
 	<bean id="tv" class="polymorphism.SamsungTV"
 		destroy-method="destoryMethod" init-method="initMethod">
+	<constructor-arg ref="sony" index="0"></constructor-arg>
+	<constructor-arg value="2000000" index="1">
+	</constructor-arg>
 	</bean>
+	<bean id="sony" class="polymorphism.SonySpeaker"></bean>
 </beans>
