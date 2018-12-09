@@ -6,7 +6,7 @@
 
 
 	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2222222"
-		destroy-method="destroyMethod" init-method="initMethod">
+		destroy-method="destoryMethod" init-method="initMethod">
 	
 	
 	
