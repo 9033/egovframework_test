@@ -1,6 +1,12 @@
 package polymorphism;
 
+import org.springframework.stereotype.Component;//component-scan사용시 필요
+
+@Component
 public class LgTV implements TV{
+	public LgTV(){
+		System.out.println("LgTV 생성");
+	}
 	public void turnOn(){
 		System.out.println("LgTV 전원 켠다.");
 	}
